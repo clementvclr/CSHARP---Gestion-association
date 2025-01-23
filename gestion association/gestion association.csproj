@@ -1,0 +1,712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FC127CA7-1606-40FE-B2BD-208FBB9FCEB4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>gestion_association</RootNamespace>
+    <AssemblyName>gestion association</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Etudiant.cs" />
+    <Compile Include="formation.cs" />
+    <Compile Include="frmaccueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmaccueil.Designer.cs">
+      <DependentUpon>frmaccueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmconnexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmconnexion.Designer.cs">
+      <DependentUpon>frmconnexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD.cs" />
+    <Compile Include="frmetudiant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmetudiant.Designer.cs">
+      <DependentUpon>frmetudiant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmhome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmhome.Designer.cs">
+      <DependentUpon>frmhome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmintervention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmintervention.Designer.cs">
+      <DependentUpon>frmintervention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intervention.cs" />
+    <Compile Include="MLR10DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmpostBts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpostBts.Designer.cs">
+      <DependentUpon>frmpostBts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmprofessionnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmprofessionnel.Designer.cs">
+      <DependentUpon>frmprofessionnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet34.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MLR10DataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MLR10DataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="postBTS.cs" />
+    <Compile Include="professionnel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeIntervention.cs" />
+    <EmbeddedResource Include="frmaccueil.resx">
+      <DependentUpon>frmaccueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmconnexion.resx">
+      <DependentUpon>frmconnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmetudiant.resx">
+      <DependentUpon>frmetudiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmhome.resx">
+      <DependentUpon>frmhome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmintervention.resx">
+      <DependentUpon>frmintervention.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmpostBts.resx">
+      <DependentUpon>frmpostBts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmprofessionnel.resx">
+      <DependentUpon>frmprofessionnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="MLR10DataSet.xsc">
+      <DependentUpon>MLR10DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet.xss">
+      <DependentUpon>MLR10DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet1.xsc">
+      <DependentUpon>MLR10DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet1.xss">
+      <DependentUpon>MLR10DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet10.xsc">
+      <DependentUpon>MLR10DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet10.xss">
+      <DependentUpon>MLR10DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet11.xsc">
+      <DependentUpon>MLR10DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet11.xss">
+      <DependentUpon>MLR10DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet12.xsc">
+      <DependentUpon>MLR10DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet12.xss">
+      <DependentUpon>MLR10DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet13.xsc">
+      <DependentUpon>MLR10DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet13.xss">
+      <DependentUpon>MLR10DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet14.xsc">
+      <DependentUpon>MLR10DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet14.xss">
+      <DependentUpon>MLR10DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet15.xsc">
+      <DependentUpon>MLR10DataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet15.xss">
+      <DependentUpon>MLR10DataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet16.xsc">
+      <DependentUpon>MLR10DataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet16.xss">
+      <DependentUpon>MLR10DataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet17.xsc">
+      <DependentUpon>MLR10DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet17.xss">
+      <DependentUpon>MLR10DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet18.xsc">
+      <DependentUpon>MLR10DataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet18.xss">
+      <DependentUpon>MLR10DataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet19.xsc">
+      <DependentUpon>MLR10DataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet19.xss">
+      <DependentUpon>MLR10DataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet2.xsc">
+      <DependentUpon>MLR10DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet2.xss">
+      <DependentUpon>MLR10DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet20.xsc">
+      <DependentUpon>MLR10DataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet20.xss">
+      <DependentUpon>MLR10DataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet21.xsc">
+      <DependentUpon>MLR10DataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet21.xss">
+      <DependentUpon>MLR10DataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet22.xsc">
+      <DependentUpon>MLR10DataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet22.xss">
+      <DependentUpon>MLR10DataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet23.xsc">
+      <DependentUpon>MLR10DataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet23.xss">
+      <DependentUpon>MLR10DataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet24.xsc">
+      <DependentUpon>MLR10DataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet24.xss">
+      <DependentUpon>MLR10DataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet25.xsc">
+      <DependentUpon>MLR10DataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet25.xss">
+      <DependentUpon>MLR10DataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet26.xsc">
+      <DependentUpon>MLR10DataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet26.xss">
+      <DependentUpon>MLR10DataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet27.xsc">
+      <DependentUpon>MLR10DataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet27.xss">
+      <DependentUpon>MLR10DataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet28.xsc">
+      <DependentUpon>MLR10DataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet28.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet28.xss">
+      <DependentUpon>MLR10DataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet29.xsc">
+      <DependentUpon>MLR10DataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet29.xss">
+      <DependentUpon>MLR10DataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet3.xsc">
+      <DependentUpon>MLR10DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet3.xss">
+      <DependentUpon>MLR10DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet30.xsc">
+      <DependentUpon>MLR10DataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet30.xss">
+      <DependentUpon>MLR10DataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet31.xsc">
+      <DependentUpon>MLR10DataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet31.xss">
+      <DependentUpon>MLR10DataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet32.xsc">
+      <DependentUpon>MLR10DataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet32.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet32.xss">
+      <DependentUpon>MLR10DataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet33.xsc">
+      <DependentUpon>MLR10DataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet33.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet33.xss">
+      <DependentUpon>MLR10DataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet34.xsc">
+      <DependentUpon>MLR10DataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet34.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet34.xss">
+      <DependentUpon>MLR10DataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet4.xsc">
+      <DependentUpon>MLR10DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet4.xss">
+      <DependentUpon>MLR10DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet5.xsc">
+      <DependentUpon>MLR10DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet5.xss">
+      <DependentUpon>MLR10DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet6.xsc">
+      <DependentUpon>MLR10DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet6.xss">
+      <DependentUpon>MLR10DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet7.xsc">
+      <DependentUpon>MLR10DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet7.xss">
+      <DependentUpon>MLR10DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet8.xsc">
+      <DependentUpon>MLR10DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet8.xss">
+      <DependentUpon>MLR10DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet9.xsc">
+      <DependentUpon>MLR10DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="MLR10DataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MLR10DataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MLR10DataSet9.xss">
+      <DependentUpon>MLR10DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
